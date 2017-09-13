@@ -1,6 +1,6 @@
 public class Node<T> {
 
-    T data;
+    private T data;
 
     public Node(T data) {
         this.data = data;
