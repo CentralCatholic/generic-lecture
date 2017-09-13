@@ -1,3 +1,5 @@
+import java.util.Map;
+import java.util.HashMap;
 // Much of this code was inspired by
 // https://www.tutorialspoint.com/java/java_generics.htm
 class GenericArrayOperations {
@@ -7,6 +9,8 @@ class GenericArrayOperations {
         Integer minValue = min(data);
         System.out.println(maxValue);
         System.out.println(minValue);
+
+        // makeHashMap();
     }
 
     public static <T extends Comparable<T>> T max(T[] array) {
@@ -29,5 +33,19 @@ class GenericArrayOperations {
             }
         }
         return minValue;
+    }
+
+    public static void makeHashMap() {
+        Map<String, String> roster = new HashMap<>();
+        roster.put("Sean", "Hazlett");
+        roster.put("Jackson", "Kaib");
+        roster.put("Colin", "Pietropoalo");
+        roster.put("Will", "Seeger");
+        roster.put("Pearce", "Walsh");
+
+        // Print last names only
+        for (String key : roster.keySet()) {
+            System.out.println(roster.get(key));
+        }
     }
 }
