@@ -1,3 +1,9 @@
+# remove vim swp files
+*.swp
+
+# remove ctags
+tags
+
 # Compiled class file
 *.class
 
